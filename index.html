@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horóscopo Descarado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Horóscopo Descarado</h1>
+  </header>
+
+  <main id="horoscopos-container">
+    <!-- Horóscopos se cargan aquí -->
+  </main>
+
+  <footer>
+    <p>Comparte tu horóscopo y ríe con tus amigos 😎</p>
+  </footer>
+
+  <script>
+    // Cargar horóscopos desde JSON
+    fetch('horoscopos.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('horoscopos-container');
+        data.forEach(h => {
+          const card = document.createElement('div');
+          card.className = 'horoscopo-card';
+          card.innerHTML = `
+            <h2>${h.signo}</h2>
+            <img src="${h.img}" alt="${h.signo}">
+            <p>${h.texto}</p>
+            <button onclick="share('${h.signo}')">Compartir</button>
+          `;
+          container.appendChild(card);
+        });
+      });
+
+    function share(signo){
+      alert(`Comparte tu horóscopo de ${signo} en redes sociales 😎`);
+    }
+  </script>
+</body>
+</html>
