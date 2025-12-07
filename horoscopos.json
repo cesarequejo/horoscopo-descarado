@@ -2,7 +2,7 @@
   {
     "signo": "Aries",
     "texto": "Hoy tu energía está a tope, Aries. Cuidado con tu impulsividad, podrías enviar memes vergonzosos a la persona equivocada 😏.",
-    "img": "images/aries.gif"
+    "img": "images/aries.png"
   },
   {
     "signo": "Tauro",
@@ -60,6 +60,7 @@
     "img": "images/piscis.gif"
   }
 ]
+
 
 
 
