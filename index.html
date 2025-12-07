@@ -5,6 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Horóscopo Descarado</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 1rem;
+      background: #ffcc00;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    .horoscopo-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      max-width: 300px;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .horoscopo-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+
+    .share-buttons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .share-buttons button {
+      flex: 1 1 30%;
+      min-width: 80px;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #fff;
+      transition: transform 0.2s;
+    }
+
+    .share-buttons button:hover {
+      transform: scale(1.05);
+    }
+
+    .share-twitter { background: #1da1f2; }
+    .share-facebook { background: #3b5998; }
+    .share-whatsapp { background: #25d366; }
+
+    @media (max-width: 480px) {
+      main {
+        flex-direction: column;
+        padding: 0.5rem;
+      }
+
+      .share-buttons button {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -32,14 +112,30 @@
             <h2>${h.signo}</h2>
             <img src="${h.img}" alt="${h.signo}">
             <p>${h.texto}</p>
-            <button onclick="share('${h.signo}')">Compartir</button>
+            <div class="share-buttons">
+              <button class="share-twitter" onclick="share('twitter','${h.signo}')">Twitter</button>
+              <button class="share-facebook" onclick="share('facebook','${h.signo}')">Facebook</button>
+              <button class="share-whatsapp" onclick="share('whatsapp','${h.signo}')">WhatsApp</button>
+            </div>
           `;
           container.appendChild(card);
         });
       });
 
-    function share(signo){
-      alert(`Comparte tu horóscopo de ${signo} en redes sociales 😎`);
+    function share(red, signo){
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent(`Mira mi horóscopo de ${signo} en Horóscopo Descarado 😎`);
+      let shareUrl = "";
+
+      if(red === "twitter") {
+        shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+      } else if(red === "facebook") {
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+      } else if(red === "whatsapp") {
+        shareUrl = `https://api.whatsapp.com/send?text=${text}%20${url}`;
+      }
+
+      window.open(shareUrl, "_blank", "width=600,height=400");
     }
   </script>
 </body>
