@@ -12,54 +12,55 @@
   {
     "signo": "Géminis",
     "texto": "Géminis, hablarás más que un grupo de WhatsApp de excompañeros. Aprovecha para repartir risas y memes 🤪.",
-    "img": "images/geminis.gif"
+    "img": "images/geminis.png"
   },
   {
     "signo": "Cáncer",
     "texto": "Cáncer, tu corazón está sensible. No llores por un mensaje que no llegó, mejor ríete con un café caliente ☕🥲.",
-    "img": "images/cancer.gif"
+    "img": "images/cancer.png"
   },
   {
     "signo": "Leo",
     "texto": "Leo, tu ego está en modo turbo. Hoy todo gira a tu alrededor… hasta los memes te obedecen 🦁🔥.",
-    "img": "images/leo.gif"
+    "img": "images/leo.png"
   },
   {
     "signo": "Virgo",
     "texto": "Virgo, tu obsesión por el orden alcanza niveles épicos. Hoy ordenas hasta los emojis en tu chat 📋😂.",
-    "img": "images/virgo.gif"
+    "img": "images/virgo.png"
   },
   {
     "signo": "Libra",
     "texto": "Libra, hoy todo es indecisión. ¿Café o té? ¿Dormir o Netflix? Respira y ríete de ti mismo ☯️😅.",
-    "img": "images/libra.gif"
+    "img": "images/libra.png"
   },
   {
     "signo": "Escorpio",
     "texto": "Escorpio, tus emociones son intensas. Hoy quieres drama, pero también un buen meme que te haga reír 🔥😎.",
-    "img": "images/escorpio.gif"
+    "img": "images/escorpio.png"
   },
   {
     "signo": "Sagitario",
     "texto": "Sagitario, hoy te dan ganas de viajar… incluso a la cocina de tu casa. Explora, ríe y no te compliques 🏹🤣.",
-    "img": "images/sagitario.gif"
+    "img": "images/sagitario.png"
   },
   {
     "signo": "Capricornio",
     "texto": "Capricornio, trabajo y disciplina al 100%, pero tu lado divertido quiere un descanso. Hoy es día de equilibrio 💼😂.",
-    "img": "images/capricornio.gif"
+    "img": "images/capricornio.png"
   },
   {
     "signo": "Acuario",
     "texto": "Acuario, tu creatividad está al máximo. Hoy inventas chistes que nadie entiende… excepto tú 😜✨.",
-    "img": "images/acuario.gif"
+    "img": "images/acuario.png"
   },
   {
     "signo": "Piscis",
     "texto": "Piscis, tu intuición te guía, pero tu flojera manda. Hoy sueñas despierto mientras la realidad espera 🐟💤.",
-    "img": "images/piscis.gif"
+    "img": "images/piscis.png"
   }
 ]
+
 
 
 
