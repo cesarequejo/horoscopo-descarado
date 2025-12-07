@@ -14,7 +14,7 @@
       background: url('fondo.jpg') no-repeat center center fixed;
       background-size: cover;
       position: relative;
-      color: #222; /* texto principal oscuro */
+      color: #222;
     }
 
     body::before {
@@ -132,6 +132,13 @@
 
   <footer>
     <p>Comparte tu horóscopo y ríe con tus amigos 😎</p>
+    <p style="text-align:center; margin-top:0.5rem; font-size:0.9rem; color:#222;">
+      © 2025 Horóscopo Descarado. Creado por César Requejo.
+    </p>
+    <p style="text-align:center; margin-top:0.3rem; font-size:0.9rem; color:#222;">
+      Si te gusta nuestro contenido, considera hacer una donación: 
+      <a href="https://www.paypal.com/donate" target="_blank" style="color:#C13584; font-weight:bold;">Donar</a>
+    </p>
   </footer>
 
   <script>
@@ -163,7 +170,7 @@
       let shareUrl = "";
 
       if(red === "instagram") {
-        // Instagram no permite compartir enlace directo, redirigimos a página principal
+        // Instagram no permite compartir enlace directo, redirige a página principal
         shareUrl = `https://www.instagram.com/?url=${url}`;
       } else if(red === "facebook") {
         shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
@@ -176,4 +183,3 @@
   </script>
 </body>
 </html>
-
