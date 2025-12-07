@@ -7,7 +7,7 @@
   {
     "signo": "Tauro",
     "texto": "Tauro, la pereza te llama, pero tu estómago llama más fuerte. Hoy es día de snacks y evitar dramas ajenos 🍕😂.",
-    "img": "images/Tauro.gif"
+    "img": "images/tauro.png"
   },
   {
     "signo": "Géminis",
@@ -60,4 +60,5 @@
     "img": "images/piscis.gif"
   }
 ]
+
 
