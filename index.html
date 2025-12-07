@@ -6,17 +6,35 @@
   <title>Horóscopo Descarado</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    /* Fondo visual con overlay oscuro */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
+      background: url('fondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    /* Overlay oscuro semitransparente para mejorar legibilidad */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: -1;
     }
 
     header, footer {
       text-align: center;
       padding: 1rem;
-      background: #ffcc00;
+      background: rgba(255, 204, 0, 0.85);
+      backdrop-filter: blur(5px);
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
     }
 
     main {
@@ -28,9 +46,9 @@
     }
 
     .horoscopo-card {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.85); /* semitransparente */
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
       padding: 1rem;
       max-width: 300px;
       width: 100%;
@@ -38,6 +56,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      backdrop-filter: blur(5px); /* difumina fondo detrás */
+      transition: transform 0.2s;
+    }
+
+    .horoscopo-card:hover {
+      transform: translateY(-5px);
     }
 
     .horoscopo-card img {
